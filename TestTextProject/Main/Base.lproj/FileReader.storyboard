@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Counter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FileReaderViewController" title="Text Counter" id="BYZ-38-t0r" customClass="FileReaderViewController" customModule="TestTextProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ghb-Kh-ktc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZnK-yG-4cr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kz7-TC-EC5"/>
+                                </connections>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBM-aY-9mG">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="SFU-wC-Poj">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SFU-wC-Poj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="07O-kI-cuy"/>
+                            <constraint firstItem="Ghb-Kh-ktc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="23r-v2-9JI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ghb-Kh-ktc" secondAttribute="trailing" id="74o-oR-w9k"/>
+                            <constraint firstItem="PBM-aY-9mG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E27-SP-v81"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ghb-Kh-ktc" secondAttribute="bottom" id="PJi-Vk-mOc"/>
+                            <constraint firstItem="SFU-wC-Poj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X6L-mZ-UhV"/>
+                            <constraint firstItem="Ghb-Kh-ktc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yaz-mf-PqW"/>
+                            <constraint firstItem="PBM-aY-9mG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bfY-i9-j12"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jFc-H8-YMj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="folder" catalog="system" id="onZ-dg-jUS">
+                            <connections>
+                                <action selector="didOpenFile" destination="BYZ-38-t0r" id="sqa-wW-lHY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="SFU-wC-Poj" id="xVx-ye-FeF"/>
+                        <outlet property="placeholderLabel" destination="PBM-aY-9mG" id="VRt-Ky-lRe"/>
+                        <outlet property="tableView" destination="Ghb-Kh-ktc" id="rNX-G8-I6e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846.56488549618314" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="folder" catalog="system" width="128" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

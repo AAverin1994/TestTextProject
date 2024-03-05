@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "WordsCountManager.didCompleateCalculation():WordsCounterManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "buffer.values">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "WordsCountManager.didCompleateWorker():WordsCounterManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TextFileServiceImpl.loadFilesFromDefaultPath(completion:):FileService.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
